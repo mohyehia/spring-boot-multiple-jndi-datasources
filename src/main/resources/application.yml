@@ -1,0 +1,16 @@
+server:
+  servlet:
+    context-path: /multiple-jndi-datasources
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+user:
+  datasource: java:comp/env/jdbc/userJNDI
+booking:
+  datasource: java:comp/env/jdbc/bookingJNDI
